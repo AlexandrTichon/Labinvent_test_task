@@ -1,0 +1,10 @@
+.ethernet-sets__ip-address {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.ethernet-sets__title {
+  font-size: 20px;
+  font-weight: 700;
+}

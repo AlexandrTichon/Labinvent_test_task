@@ -1,0 +1,78 @@
+.required-symbol {
+  color: #ff0000;
+}
+
+.ip-address__container {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ip-address__container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: solid 1px #E1E2E3;
+}
+
+.ip-address__container:hover input ~ .checkmark {
+  background-color: #e5e5e5;
+}
+
+.checkmark::after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.ip-address__container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.ip-address__container input:checked ~ .checkmark {
+  background-color: #83D0F4;
+  border: solid 1px #83D0F4;
+}
+
+.ip-address__container .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.ip-address__custom-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.ip-address__text {
+  margin-left: auto;
+}
+
+.ip-address__input {
+  width: 350px;
+  height: 20px;
+  padding: 5px;
+  margin: 10px;
+}
