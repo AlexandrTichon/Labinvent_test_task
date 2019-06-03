@@ -3,15 +3,14 @@
 }
 
 .ip-address__container {
-  display: block;
+  display: inline-block;
   position: relative;
   margin-bottom: 20px;
   padding-left: 35px;
+}
+
+.text__label-container, .required-symbol, .ip-address__container {
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .ip-address__container input {
@@ -75,4 +74,11 @@
   height: 20px;
   padding: 5px;
   margin: 10px;
+  background-color: #fff;
+  border: 1px solid #DADBE3;
+}
+
+.required__symbol {
+  color: #ED9A97;
+  cursor: default;
 }

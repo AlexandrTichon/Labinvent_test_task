@@ -1,0 +1,104 @@
+.wireless-sets {
+  display: flex;
+  flex-direction: column;
+}
+
+.wireless-sets__title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.wireless-sets__title {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.wireless-sets__checkbox, .wireless-sets__sequrity-checkbox {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 35px;
+}
+
+.wireless-sets__checkbox .wireless-sets__input {
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+
+.checkmark__checkbox {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: solid 1px #E1E2E3;
+}
+
+.checkmark__checkbox::after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.wireless-sets__checkbox:hover .wireless-sets__input ~ .checkmark__checkbox {
+  background-color: #e5e5e5;
+}
+
+.wireless-sets__checkbox .wireless-sets__input:checked ~ .checkmark__checkbox {
+  background-color: #83D0F4;
+  border: solid 1px #83D0F4;
+}
+
+.wireless-sets__checkbox .wireless-sets__input:checked ~ .checkmark__checkbox::after {
+  display: block;
+}
+
+.wireless-sets__checkbox .checkmark__checkbox::after {
+  left: 7px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.refresh-icon {
+  border: #2CAFED solid 1px;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.wireless-sets__network-name, .wireless-sets__sequrity-key {
+  display: inline-flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.network-name__refresk-btn {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  align-self: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  padding: 0;
+  outline: none;
+  margin: 0 40px;
+}
+
+.key-container__input {
+  width: 350px;
+  height: 20px;
+  padding: 5px;
+  margin: 10px;
+  background-color: #fff;
+  border: 1px solid #DADBE3;
+}

@@ -1,13 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ControlInputBlock from '../contrrolInputBlock/contrrolInputBlock';
 
 import './ethernetSettings.css';
 
-const EthernetSettings = () => (
+const EthernetSettings = ({ title, setsId, disabled }) => (
   <div className="ethernet-sets">
-    <h3 className="ethernet-sets__title">Ethernet Settings</h3>
+    {title && (<h3 className="ethernet-sets__title">{title}</h3>)}
     <div className="ethernet-sets__ip-address">
-      <ControlInputBlock componentChilds={
+      <ControlInputBlock
+        setsId={setsId}
+        blockDisabled={disabled}
+        componentChilds={
         {
           mainBtn: {
             label: 'Obtain an IP address automatically (DHCP/BootP)',
@@ -39,8 +43,50 @@ const EthernetSettings = () => (
         }
       }
       />
+      <ControlInputBlock
+        setsId={setsId}
+        blockDisabled={disabled}
+        componentChilds={
+        {
+          mainBtn: {
+            label: 'Obtain DNS server address automatically',
+            id: 'dns-server-auto',
+            inputName: 'dns-server',
+          },
+          minorBtn: {
+            label: 'Use the follow DNS server address',
+            id: 'dns-server-custom',
+            inputName: 'dns-server',
+            childs: [
+              {
+                label: 'Preffered DNS server',
+                id: 'preffered-dns-server-name',
+                required: true,
+              },
+              {
+                label: 'Alternative DNS server',
+                id: 'subnet-mask',
+                required: false,
+              },
+            ],
+          },
+        }
+      }
+      />
     </div>
   </div>
 );
+
+EthernetSettings.propTypes = {
+  title: PropTypes.string,
+  setsId: PropTypes.string,
+  disabled: PropTypes.bool,
+};
+
+EthernetSettings.defaultProps = {
+  title: '',
+  setsId: '',
+  disabled: false,
+};
 
 export default EthernetSettings;

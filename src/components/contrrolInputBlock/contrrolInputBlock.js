@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
+import uniqid from 'uniqid';
 import './contrrolInputBlock.css';
 
 class ContrrolInputBlock extends React.Component {
@@ -19,28 +21,52 @@ class ContrrolInputBlock extends React.Component {
 
   render() {
     const { disable } = this.state;
-    const { componentChilds } = this.props;
+    const { componentChilds, setsId } = this.props;
     const { mainBtn, minorBtn } = componentChilds;
     const { childs } = minorBtn;
+    const inputName = `${setsId}-${mainBtn.inputName}`;
+    const inputMinorId = `${minorBtn.id}-${inputName}`;
+    const inputMainId = `${mainBtn.id}-${inputName}`;
+
+    const { blockDisabled } = this.props;
     return (
       <>
-        <label htmlFor={mainBtn.id} className="ip-address__container">
-          <input type="radio" name={mainBtn.inputName} id={mainBtn.id} defaultChecked onChange={this.switchHandler} />
+        <label htmlFor={inputMainId} className={cn('ip-address__container', { disabled: blockDisabled })}>
+          <input
+            type="radio"
+            name={inputName}
+            id={inputMainId}
+            defaultChecked
+            onChange={this.switchHandler}
+            disabled={blockDisabled}
+          />
           {mainBtn.label}
           <span className="checkmark" />
         </label>
-        <label htmlFor={minorBtn.id} className="ip-address__container">
-          <input type="radio" name={minorBtn.inputName} id={minorBtn.id} onChange={this.switchHandler} />
+        <label htmlFor={inputMinorId} className={cn('ip-address__container', { disabled: blockDisabled })}>
+          <input
+            type="radio"
+            name={inputName}
+            id={inputMinorId}
+            onChange={this.switchHandler}
+            disabled={blockDisabled}
+          />
           {minorBtn.label}
           <span className="checkmark" />
         </label>
         <div className="ip-address__custom-container">
           {
             childs.map(child => (
-              <label htmlFor={child.id} className="ip-address__text">
-                <span className="text__label-container">
+              <label htmlFor={child.id} className="ip-address__text" key={uniqid()}>
+                <span className={cn('text__label-container', { disabled: disable })}>
                   {child.label}
-                  {child.required && <span className="required-symbol">*</span>}
+                  {child.required && (
+                    <span className={cn('required-symbol',
+                      { disabled: disable })}
+                    >
+                      {' * '}
+                    </span>
+                  )}
                 </span>
                 <input type="text" className="ip-address__input" id={child.id} disabled={disable} />
               </label>
@@ -54,6 +80,12 @@ class ContrrolInputBlock extends React.Component {
 
 ContrrolInputBlock.propTypes = {
   componentChilds: PropTypes.instanceOf(Object).isRequired,
+  setsId: PropTypes.string.isRequired,
+  blockDisabled: PropTypes.string,
+};
+
+ContrrolInputBlock.defaultProps = {
+  blockDisabled: false,
 };
 
 export default ContrrolInputBlock;
