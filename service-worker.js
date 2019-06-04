@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/labinvent_test_task/precache-manifest.89be7cc52c8a6cf49b4d23a948846241.js"
+  "/labinvent_test_task/precache-manifest.4579a237f9f616fc6879e4eb364a667b.js"
 );
 
 self.addEventListener('message', (event) => {
