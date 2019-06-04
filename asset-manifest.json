@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/labinvent_test_task/static/css/main.96326809.chunk.css",
-    "main.js": "/labinvent_test_task/static/js/main.63335c77.chunk.js",
-    "main.js.map": "/labinvent_test_task/static/js/main.63335c77.chunk.js.map",
+    "main.js": "/labinvent_test_task/static/js/main.c1ff5068.chunk.js",
+    "main.js.map": "/labinvent_test_task/static/js/main.c1ff5068.chunk.js.map",
     "runtime~main.js": "/labinvent_test_task/static/js/runtime~main.1cc4f9b7.js",
     "runtime~main.js.map": "/labinvent_test_task/static/js/runtime~main.1cc4f9b7.js.map",
     "static/js/2.b1174d88.chunk.js": "/labinvent_test_task/static/js/2.b1174d88.chunk.js",
     "static/js/2.b1174d88.chunk.js.map": "/labinvent_test_task/static/js/2.b1174d88.chunk.js.map",
     "index.html": "/labinvent_test_task/index.html",
-    "precache-manifest.27b685dc1af2d7b2488706fb689ac13d.js": "/labinvent_test_task/precache-manifest.27b685dc1af2d7b2488706fb689ac13d.js",
+    "precache-manifest.89be7cc52c8a6cf49b4d23a948846241.js": "/labinvent_test_task/precache-manifest.89be7cc52c8a6cf49b4d23a948846241.js",
     "service-worker.js": "/labinvent_test_task/service-worker.js",
     "static/css/main.96326809.chunk.css.map": "/labinvent_test_task/static/css/main.96326809.chunk.css.map",
     "static/media/refresh_icon.svg": "/labinvent_test_task/static/media/refresh_icon.313c6dcf.svg"
