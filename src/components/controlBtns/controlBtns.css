@@ -1,0 +1,38 @@
+.control-btns__save-btn, .control-btns__cansel-btn {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 15px;
+  height: 30px;
+  width: 150px;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.control-btns__save-btn {
+  background-color: #1AA8EB;
+}
+
+.form__container__control-btns {
+  margin: 15px 20px;
+}
+
+.control-btns__save-btn {
+  color: #fff;
+}
+
+.control-btns__cansel-btn {
+  background-color: transparent;
+  border: 2px solid #1AA8EB;
+  color: #1AA8EB;
+}
+
+.control-btns__save-btn:active {
+  box-shadow: 0px 0px 6px 0px #1AA8EB;
+}
+
+.control-btns__cansel-btn:active {
+  box-shadow: 0px 0px 6px 0px #1AA8EB;
+}
+

@@ -1,0 +1,18 @@
+.form__container {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px;
+  user-select: none;
+}
+
+.settings-block {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #E1E2E3;
+  flex: 1 100%;
+  padding: 10px;
+}
+
+@media all and (min-width: 600px) {
+  .settings-block { flex: 1 0 0; }
+}
