@@ -48,7 +48,7 @@ class WirelessSettings extends React.Component {
           <span className="required-symbol">
             {' * '}
           </span>
-          <SelectWireless />
+          <SelectWireless disableBlock={disableWifi} />
         </div>
         <label
           htmlFor="sequrity-checkbox__input"
@@ -77,6 +77,8 @@ class WirelessSettings extends React.Component {
               className="key-container__input"
               id="key-container__input"
               type="text"
+              disabled={disableSequrity}
+              required={!disableSequrity}
             />
           </label>
         </div>

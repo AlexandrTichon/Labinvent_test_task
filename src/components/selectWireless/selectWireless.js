@@ -1,5 +1,6 @@
 import React from 'react';
 import unqid from 'uniqid';
+import PropTypes from 'prop-types';
 import refreshIcon from '../../assets/img/refresh_icon.svg';
 import './selectWireless.css';
 
@@ -39,6 +40,7 @@ class SelectWireless extends React.Component {
   }
 
   render() {
+    const { disableBlock } = this.props;
     const { data, fetchStatus } = this.state;
     // eslint-disable-next-line default-case
     switch (fetchStatus) {
@@ -46,6 +48,7 @@ class SelectWireless extends React.Component {
         return (
           <>
             <select
+              disabled={disableBlock}
               className="input-container__select"
               id="wireless-network-name"
             />
@@ -62,6 +65,7 @@ class SelectWireless extends React.Component {
         return (
           <>
             <select
+              disabled
               className="input-container__select"
               id="wireless-network-name"
             />
@@ -79,6 +83,8 @@ class SelectWireless extends React.Component {
     return (
       <>
         <select
+          disabled={disableBlock}
+          required={!disableBlock}
           className="input-container__select"
           id="wireless-network-name"
         >
@@ -95,5 +101,9 @@ class SelectWireless extends React.Component {
     );
   }
 }
+
+SelectWireless.propTypes = {
+  disableBlock: PropTypes.bool.isRequired,
+};
 
 export default SelectWireless;

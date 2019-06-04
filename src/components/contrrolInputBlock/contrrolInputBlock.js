@@ -10,10 +10,10 @@ class ContrrolInputBlock extends React.Component {
     this.state = {
       disable: true,
     };
-    this.switchHandler = this.switchHandler.bind(this);
+    this.switcher = this.switcher.bind(this);
   }
 
-  switchHandler() {
+  switcher() {
     this.setState(prevState => ({
       disable: !prevState.disable,
     }));
@@ -24,7 +24,7 @@ class ContrrolInputBlock extends React.Component {
     const { componentChilds, setsId } = this.props;
     const { mainBtn, minorBtn } = componentChilds;
     const { childs } = minorBtn;
-    const inputName = `${setsId}-${mainBtn.inputName}`;
+    const inputName = `${setsId}-${mainBtn.inputName}-auto`;
     const inputMinorId = `${minorBtn.id}-${inputName}`;
     const inputMainId = `${mainBtn.id}-${inputName}`;
 
@@ -37,7 +37,7 @@ class ContrrolInputBlock extends React.Component {
             name={inputName}
             id={inputMainId}
             defaultChecked
-            onChange={this.switchHandler}
+            onChange={this.switcher}
             disabled={blockDisabled}
           />
           {mainBtn.label}
@@ -48,7 +48,7 @@ class ContrrolInputBlock extends React.Component {
             type="radio"
             name={inputName}
             id={inputMinorId}
-            onChange={this.switchHandler}
+            onChange={this.switcher}
             disabled={blockDisabled}
           />
           {minorBtn.label}
@@ -68,7 +68,13 @@ class ContrrolInputBlock extends React.Component {
                     </span>
                   )}
                 </span>
-                <input type="text" className="ip-address__input" id={child.id} disabled={disable} />
+                <input
+                  type="text"
+                  className="ip-address__input"
+                  id={`${setsId}-${child.id}`}
+                  disabled={disable}
+                  required={child.required && !disable}
+                />
               </label>
             ))
           }
@@ -81,7 +87,7 @@ class ContrrolInputBlock extends React.Component {
 ContrrolInputBlock.propTypes = {
   componentChilds: PropTypes.instanceOf(Object).isRequired,
   setsId: PropTypes.string.isRequired,
-  blockDisabled: PropTypes.string,
+  blockDisabled: PropTypes.bool,
 };
 
 ContrrolInputBlock.defaultProps = {

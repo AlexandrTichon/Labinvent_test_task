@@ -3,9 +3,12 @@ import './App.css';
 
 import WirelessSettings from '../wirelessSettings/wirelessSettings';
 import EthernetSettings from '../ethernetSettings/ethernetSettings';
+import ControlBtns from '../controlBtns/controlBtns';
+
+import submit from '../../submit';
 
 const App = () => (
-  <form className="form">
+  <form className="form" onSubmit={submit}>
     <div className="form__container">
       <div className="settings-block">
         <EthernetSettings title="Ethernet Settings" setsId="ethernet" />
@@ -14,7 +17,7 @@ const App = () => (
         <WirelessSettings />
       </div>
     </div>
-
+    <ControlBtns />
   </form>
 );
 
