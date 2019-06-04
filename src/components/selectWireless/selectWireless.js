@@ -20,7 +20,7 @@ class SelectWireless extends React.Component {
 
   fetchData() {
     this.setState({ fetchStatus: 'loading' });
-    setTimeout(() => fetch('/mock.json')
+    setTimeout(() => fetch('./mock.json')
       .then(response => response.json())
       .then((result) => {
         const displayData = [];
