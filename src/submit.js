@@ -4,7 +4,7 @@ function submit(event) {
   const formElements = [...event.target];
   const dataToSave = {};
   formElements.forEach((element) => {
-    if (element.getAttribute('disabled') === null) {
+    if (element.getAttribute('disabled') === null && element.id) {
       const elementId = element.id;
       dataToSave[elementId] = element.value;
     }
