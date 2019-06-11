@@ -65,7 +65,7 @@ const EthernetSettings = ({ title, setsId, disabled }) => (
               },
               {
                 label: 'Alternative DNS server',
-                id: 'subnet-mask',
+                id: 'alternative-dns-server',
                 required: false,
               },
             ],
