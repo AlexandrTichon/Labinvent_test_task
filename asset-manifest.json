@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/labinvent_test_task/static/css/main.96326809.chunk.css",
-    "main.js": "/labinvent_test_task/static/js/main.ee53722e.chunk.js",
-    "main.js.map": "/labinvent_test_task/static/js/main.ee53722e.chunk.js.map",
+    "main.css": "/labinvent_test_task/static/css/main.dc9eab23.chunk.css",
+    "main.js": "/labinvent_test_task/static/js/main.ea067d93.chunk.js",
+    "main.js.map": "/labinvent_test_task/static/js/main.ea067d93.chunk.js.map",
     "runtime~main.js": "/labinvent_test_task/static/js/runtime~main.1cc4f9b7.js",
     "runtime~main.js.map": "/labinvent_test_task/static/js/runtime~main.1cc4f9b7.js.map",
-    "static/js/2.b1174d88.chunk.js": "/labinvent_test_task/static/js/2.b1174d88.chunk.js",
-    "static/js/2.b1174d88.chunk.js.map": "/labinvent_test_task/static/js/2.b1174d88.chunk.js.map",
+    "static/js/2.46a289e4.chunk.js": "/labinvent_test_task/static/js/2.46a289e4.chunk.js",
+    "static/js/2.46a289e4.chunk.js.map": "/labinvent_test_task/static/js/2.46a289e4.chunk.js.map",
     "index.html": "/labinvent_test_task/index.html",
-    "precache-manifest.4579a237f9f616fc6879e4eb364a667b.js": "/labinvent_test_task/precache-manifest.4579a237f9f616fc6879e4eb364a667b.js",
+    "precache-manifest.2d165a61c5a27b63bd3ed98cae7ae98a.js": "/labinvent_test_task/precache-manifest.2d165a61c5a27b63bd3ed98cae7ae98a.js",
     "service-worker.js": "/labinvent_test_task/service-worker.js",
-    "static/css/main.96326809.chunk.css.map": "/labinvent_test_task/static/css/main.96326809.chunk.css.map",
+    "static/css/main.dc9eab23.chunk.css.map": "/labinvent_test_task/static/css/main.dc9eab23.chunk.css.map",
     "static/media/refresh_icon.svg": "/labinvent_test_task/static/media/refresh_icon.313c6dcf.svg"
   }
 }
