@@ -82,3 +82,8 @@
   color: #ED9A97;
   cursor: default;
 }
+
+.ip-address__input:invalid {
+  border: red 2px solid;
+  padding: 4px; 
+}

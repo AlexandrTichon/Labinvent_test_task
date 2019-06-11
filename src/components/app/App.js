@@ -5,7 +5,7 @@ import WirelessSettings from '../wirelessSettings/wirelessSettings';
 import EthernetSettings from '../ethernetSettings/ethernetSettings';
 import ControlBtns from '../controlBtns/controlBtns';
 
-import submit from '../../submit';
+import { submit } from '../../api';
 
 const App = () => (
   <form className="form" onSubmit={submit}>

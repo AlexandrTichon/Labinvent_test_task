@@ -2,6 +2,7 @@ import React from 'react';
 import unqid from 'uniqid';
 import PropTypes from 'prop-types';
 import refreshIcon from '../../assets/img/refresh_icon.svg';
+import { getPropValue } from '../../api';
 import './selectWireless.css';
 
 class SelectWireless extends React.Component {
@@ -10,13 +11,28 @@ class SelectWireless extends React.Component {
     this.state = {
       data: [],
       fetchStatus: 'loading',
+      value: '',
     };
     this.fetchData = this.fetchData.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.setInitialData = this.setInitialData.bind(this);
   }
 
   componentDidMount() {
     this.fetchData();
+    this.setInitialData();
   }
+
+  setInitialData() {
+    const initialData = JSON.parse(localStorage.getItem('internetSets'));
+    const defaultValue = getPropValue(initialData, 'wireless-network-name');
+    this.setState({ value: defaultValue });
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
+
 
   fetchData() {
     this.setState({ fetchStatus: 'loading' });
@@ -41,7 +57,7 @@ class SelectWireless extends React.Component {
 
   render() {
     const { disableBlock } = this.props;
-    const { data, fetchStatus } = this.state;
+    const { data, fetchStatus, value } = this.state;
     // eslint-disable-next-line default-case
     switch (fetchStatus) {
       case 'loading':
@@ -87,6 +103,8 @@ class SelectWireless extends React.Component {
           required={!disableBlock}
           className="input-container__select"
           id="wireless-network-name"
+          value={value}
+          onChange={this.handleChange}
         >
           {data}
         </select>
